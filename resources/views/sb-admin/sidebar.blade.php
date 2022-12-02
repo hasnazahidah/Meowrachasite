@@ -36,7 +36,9 @@
                         <a class="collapse-item" href="/adopsi">Adopsi</a>
                         <a class="collapse-item" href="/konsultasi">Konsultasi</a>
                         <a class="collapse-item" href="/penitipan">Penitipan</a>
-                        <a class="collapse-item" href="/artikel">Artikel</a>
+                        <a class="collapse-item" href="/post">Artikel</a>
+                        <a class="collapse-item" href="/kategori">Kategori</a>
+                        <a class="collapse-item" href="/kucing">Kucing</a>
                     </div>
                 </div>
             </li>

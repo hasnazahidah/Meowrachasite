@@ -1,6 +1,6 @@
 @extends('sb-admin/app')
 
-@section('title', 'Artikel')
+@section('title', 'Post')
 
 @section('content')
 <!-- Page Heading -->
