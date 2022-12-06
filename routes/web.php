@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KucingController;
 use App\Http\Controllers\AdopsiController;
+use App\Http\Controllers\KonsultasiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,6 +51,7 @@ Route::resource('/post', 'PostController');
 Route::resource('/kategori', 'KategoriController');
 Route::resource('/kucing', 'KucingController');
 Route::resource('/adopsi', 'AdopsiController');
+Route::resource('/konsultasi', 'KonsultasiController');
 
 // Route::get('/', 'ArtikelController@index');
 // Route::get('/{slug}', 'ArtikelController@artikel');
