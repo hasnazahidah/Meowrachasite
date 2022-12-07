@@ -60,6 +60,13 @@
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
