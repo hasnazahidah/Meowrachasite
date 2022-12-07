@@ -1,5 +1,5 @@
 @extends('sb-admin/app')
-@section('title', 'Konsultasi')
+@section('title', 'konsultasi')
 
 
 @section('content')
@@ -7,32 +7,28 @@
     {!! session('sukses') !!}
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Konsultasi</h1>
+    <h1 class="h3 mb-4 text-gray-800">konsultasi</h1>
 
-    <a href="/konsultasi/create/" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah konsultasi</a>
+    <a href="/konsultasi/create/" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Konsultasi</a>
 
 
   
         <table class="table mt-4 table-hover table-bordered">
-            <thead>
+        <thead>
                 <tr>
-                <th></th>
                 <th scope="col">Nama Konsultan</th>
+                <th>
                 </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
                 @foreach ($konsultasi as $row)
                     <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    
                     <td>{{$row->nama_konsultan}}</td>
-                    
-                    <td width="35%">
+                    <td width="20%">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            
-                            <a href="/konsultasi/{{$row->id}}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i> Detail</a>
-                            <a href="/konsultasi/{{$row->id}}/edit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-edit"></i> Edit</a>
-                            <form action="/konsultasi/{{$row->id}}" method="konsultasi">
+                        <a href="/konsultasi/{{$row->id}}/edit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-edit"></i> Edit</a>
+                        <form action="/konsultasi/{{$row->id}}" method="post">
                         @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</button>
@@ -42,8 +38,10 @@
                     </tr>
                 @endforeach
             </tbody>
+            
         </table>
         {{$konsultasi->links()}}
+        
 
 @endsection
 

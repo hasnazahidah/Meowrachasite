@@ -28,18 +28,15 @@
                 @foreach ($adopsi as $row)
                     <tr>
                     <th scope="row">{{$loop->iteration}}</th>
-                    
                     <td>{{$row->title}}</td>
                     <td>{{$row->alasan_owner}}</td>
                     <td>{{$row->medical_note}}</td>
                     <td>{{$row->deskripsi}}</td>
-                    
-                    <td width="35%">
+                    <td width="20%">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            
-                            <a href="/adopsi/{{$row->id}}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i> Detail</a>
-                            <a href="/adopsi/{{$row->id}}/edit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-edit"></i> Edit</a>
-                            <form action="/adopsi/{{$row->id}}" method="adopsi">
+                        <a href="/adopsi/{{$row->id}}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i> Detail</a>
+                        <a href="/adopsi/{{$row->id}}/edit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-edit"></i> Edit</a>
+                        <form action="/adopsi/{{$row->id}}" method="post">
                         @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</button>

@@ -18,8 +18,8 @@
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Image</th>
-                <th scope="col">Nama_kucing</th>
-                <th scope="col">Jenis_kucing</th>
+                <th scope="col">Nama kucing</th>
+                <th scope="col">Jenis kucing</th>
                 <th scope="col">Aksi</th>
                 </tr>
         </thead>

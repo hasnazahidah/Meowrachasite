@@ -20,7 +20,6 @@
                 <th scope="col">Sampul</th>
                 <th scope="col">Judul</th>
                 <th scope="col">Kategori</th>
-                <th scope="col">Tag</th>
                 <th scope="col">Aksi</th>
                 </tr>
             </thead>

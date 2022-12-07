@@ -16,13 +16,6 @@
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <div class="form-group">
-            <label for="editor">deskripsi</label>
-            <textarea class="form-control" id="editor" rows="10" name="deskripsi">{{old('deskripsi') ? old('deskripsi') : $konsultasi->deskripsi}}</textarea>
-            @error('deskripsi')
-                <small class="text-danger">{{ $message }}</small>
-            @enderror
-        </div>
         <button type="submit" class="btn btn-primary btn-sm">Edit</button>
         <a href="/konsultasi" class="btn btn-secondary btn-sm">Kembali</a>
     </form>
