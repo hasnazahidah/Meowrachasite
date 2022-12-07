@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Controllers\ArtikelController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KucingController;
 use App\Http\Controllers\AdopsiController;
 use App\Http\Controllers\KonsultasiController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,6 +53,7 @@ Route::resource('/kategori', 'KategoriController');
 Route::resource('/kucing', 'KucingController');
 Route::resource('/adopsi', 'AdopsiController');
 Route::resource('/konsultasi', 'KonsultasiController');
+// Route::resource('/dashboard', 'DashboardController');
 
 // Route::get('/', 'ArtikelController@index');
 // Route::get('/{slug}', 'ArtikelController@artikel');

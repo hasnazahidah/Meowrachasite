@@ -46,61 +46,70 @@
 <div class="row">
 <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-primary">
+          <div class="card bg-success">
             <div class="inner">
-              <h3>12</h3>
+              <h3 style="color: #ffffff; text-align: center">
+              <?php
+              $count = DB::table('adopsi')->count();
+              echo $count;
+              ?>
+              </h3>
 
-              <p>Adopsi</p>
+              <p style="color: #ffffff; text-align: center">Adopsi</p>
             </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a href="adopsi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+
+            <a href="adopsi" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-primary">
+          <div class="card bg-danger">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3 style="color: #ffffff; text-align: center">
+              <?php
+              $count = DB::table('konsultasi')->count();
+              echo $count;
+              ?>
+              </h3>
 
-              <p>Konsultasi</p>
+              <p style="color: #ffffff; text-align: center">Konsultasi</p>
             </div>
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
-            <a href="konsultasi" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="konsultasi" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-primary">
+          <div class="card bg-info">
             <div class="inner">
-              <h3>44</h3>
+              <h3 style="color: #ffffff; text-align: center">
+              <?php
+              $count = DB::table('penitipan')->count();
+              echo $count;
+              ?>
+              </h3>
 
-              <p>Penitipan</p>
+              <p style="color: #ffffff; text-align: center">Penitipan</p>
             </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-            <a href="penitipan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="penitipan" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-primary">
+          <div class="card bg-warning">
             <div class="inner">
-              <h3>65</h3>
+              <h3 style="color: #ffffff; text-align: center">
+              <?php
+              $count = DB::table('post')->count();
+              echo $count;
+              ?>
+              </h3>
 
-              <p>Artikel</p>
+              <p style="color: #ffffff; text-align: center">Artikel</p>
             </div>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a href="artikel" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="artikel" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
     </div>
 </div>
