@@ -23,7 +23,7 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="image">Image</label>
+            <label for="image">Foto Kucing</label>
             <input type="file" class="form-control" id="image" name="image">
             @error('image')
                 <small class="text-danger">{{ $message }}</small>

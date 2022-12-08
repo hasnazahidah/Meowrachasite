@@ -15,7 +15,7 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::select('id', 'nama', 'slug')->latest()->paginate(5);
+        $kategori = Kategori::select('id', 'nama_kategori', 'slug')->latest()->paginate(5);
         return view('admin/kategori/index', compact('kategori'));
     }
 
@@ -38,12 +38,12 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
+            'nama_kategori' => 'required',
         ]);
 
         Kategori::create([
-            'nama' => Str::title($request->nama),
-            'slug' => Str::slug($request->nama, '-')
+            'nama_kategori' => Str::title($request->nama_kategori),
+            'slug' => Str::slug($request->nama_kategori, '-')
         ]);
 
         $request->session()->flash('sukses', '
@@ -73,7 +73,7 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::select('id', 'nama')->whereId($id)->first();
+        $kategori = Kategori::select('id', 'nama_kategori')->whereId($id)->first();
         return view('admin/kategori/edit', compact('kategori'));
     }
 
@@ -87,12 +87,12 @@ class KategoriController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required',
+            'nama_kategori' => 'required',
         ]);
 
         Kategori::whereId($id)->update([
-            'nama' => Str::title($request->nama),
-            'slug' => Str::slug($request->nama, '-')
+            'nama_kategori' => Str::title($request->nama_kategori),
+            'slug' => Str::slug($request->nama_kategori, '-')
         ]);
 
         $request->session()->flash('sukses', '

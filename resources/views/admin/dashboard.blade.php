@@ -46,9 +46,9 @@
 <div class="row">
 <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-success">
+          <div class="card title bg-success" style="height: 120px">
             <div class="inner">
-              <h3 style="color: #ffffff; text-align: center">
+              <h3 style="color: #ffffff; text-align: center; line-height: revert">
               <?php
               $count = DB::table('adopsi')->count();
               echo $count;
@@ -58,15 +58,15 @@
               <p style="color: #ffffff; text-align: center">Adopsi</p>
             </div>
 
-            <a href="adopsi" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="adopsi" class="small-box-footer" style="color: #ffffff; text-align: center; font-weight: bold">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-danger">
+          <div class="card title bg-danger" style="height: 120px">
             <div class="inner">
-              <h3 style="color: #ffffff; text-align: center">
+              <h3 style="color: #ffffff; text-align: center; line-height: revert">
               <?php
               $count = DB::table('konsultasi')->count();
               echo $count;
@@ -75,15 +75,15 @@
 
               <p style="color: #ffffff; text-align: center">Konsultasi</p>
             </div>
-            <a href="konsultasi" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="konsultasi" class="small-box-footer" style="color: #ffffff; text-align: center; font-weight: bold">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-info">
+          <div class="card title bg-info" style="height: 120px">
             <div class="inner">
-              <h3 style="color: #ffffff; text-align: center">
+              <h3 style="color: #ffffff; text-align: center; line-height: revert">
               <?php
               $count = DB::table('penitipan')->count();
               echo $count;
@@ -92,15 +92,15 @@
 
               <p style="color: #ffffff; text-align: center">Penitipan</p>
             </div>
-            <a href="penitipan" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="penitipan" class="small-box-footer" style="color: #ffffff; text-align: center; font-weight: bold">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="card bg-warning">
+          <div class="card title bg-warning" style="height: 120px">
             <div class="inner">
-              <h3 style="color: #ffffff; text-align: center">
+              <h3 style="color: #ffffff; text-align: center; line-height: revert">
               <?php
               $count = DB::table('post')->count();
               echo $count;
@@ -109,7 +109,7 @@
 
               <p style="color: #ffffff; text-align: center">Artikel</p>
             </div>
-            <a href="artikel" class="small-box-footer" style="color: #ffffff; text-align: center">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="artikel" class="small-box-footer" style="color: #ffffff; text-align: center; font-weight: bold">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
     </div>
 </div>

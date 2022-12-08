@@ -17,7 +17,7 @@
         <thead>
                 <tr>
                 <th scope="col">No</th>
-                <th scope="col">Image</th>
+                <th scope="col">Foto Kucing</th>
                 <th scope="col">Nama kucing</th>
                 <th scope="col">Jenis kucing</th>
                 <th scope="col">Aksi</th>

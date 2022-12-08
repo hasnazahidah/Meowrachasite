@@ -9,8 +9,8 @@
         @csrf
         @method('PATCH')
         <div class="form-group">
-            <label for="nama">Kategori</label>
-            <input type="text" class="form-control" id="nama" name="nama" value="{{$kategori->nama}}">
+            <label for="nama_kategori">Kategori</label>
+            <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="{{$kategori->nama_kategori}}">
            
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Edit</button>

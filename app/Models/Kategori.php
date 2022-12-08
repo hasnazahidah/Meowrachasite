@@ -9,7 +9,7 @@ class Kategori extends Model
 {
 
     protected $table = 'kategori';
-    protected $fillable = ['nama', 'slug'];
+    protected $fillable = ['nama_kategori', 'slug'];
 
     public function post()
     {

@@ -8,9 +8,9 @@
     <form action="/kategori" method="POST">
         @csrf
         <div class="form-group">
-            <label for="nama">Kategori</label>
-            <input type="text" class="form-control" id="nama" name="nama">
-            @error('nama')
+            <label for="nama_kategori">Kategori</label>
+            <input type="text" class="form-control" id="nama_kategori" name="nama_kategori">
+            @error('nama_kategori')
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>

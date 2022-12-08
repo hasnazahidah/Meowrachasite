@@ -30,7 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $kategori = Kategori::select('id', 'nama')->get();
+        $kategori = Kategori::select('id', 'nama_kategori')->get();
         return view('admin/post/create', compact('kategori'));
     }
 
@@ -53,10 +53,10 @@ class PostController extends Controller
         $request->sampul->move('upload/post', $sampul);
 
         Post::create([
+            'id_kategori' => $request->kategori,
             'sampul' => $sampul,
             'judul' => $request->judul,
             'konten' => $request->konten,
-            'id_kategori' => $request->kategori,
             'slug' => Str::slug($request->judul, '-')
         ]);
 
@@ -88,7 +88,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::select('id', 'nama')->get();
+        $kategori = Kategori::select('id', 'nama_kategori')->get();
         $post = Post::select('id', 'judul', 'sampul', 'konten', 'id_kategori')->whereId($id)->firstOrFail();
         return view('admin/post/edit', compact('post', 'kategori'));
     }

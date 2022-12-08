@@ -9,7 +9,7 @@
     <form action="/adopsi" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="title">title</label>
+            <label for="title">Nama Kucing</label>
             <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
             @error('title')
                 <small class="text-danger">{{ $message }}</small>

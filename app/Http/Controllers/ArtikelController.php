@@ -12,7 +12,7 @@ class ArtikelController extends Controller
     {
 
         $artikel = Post::select('sampul', 'judul', 'slug', 'created_at')->latest()->paginate(6);        
-        $kategori = Kategori::select('slug', 'nama')->orderBy('nama', 'asc')->get();
+        $kategori = Kategori::select('slug', 'nama_kategori')->orderBy('nama_kategori', 'asc')->get();
         return view('artikel/index', compact('artikel', 'kategori'));
     }
 
@@ -20,7 +20,7 @@ class ArtikelController extends Controller
     {
         
         $artikel = Post::select('id', 'judul', 'konten', 'id_kategori', 'created_at', 'sampul')->where('slug', $slug)->firstOrFail();
-        $kategori = Kategori::select('slug', 'nama')->orderBy('nama', 'asc')->get();
+        $kategori = Kategori::select('slug', 'nama_kategori')->orderBy('nama_kategori', 'asc')->get();
         return view('artikel/artikel', compact('artikel', 'kategori'));
     }
 
@@ -29,7 +29,7 @@ class ArtikelController extends Controller
         
         $kategori = Kategori::select('id')->where('slug', $slug)->firstOrFail();       
         $artikel = Post::select('sampul', 'judul', 'slug', 'created_at')->where('id_kategori', $kategori->id)->latest()->paginate(6);     
-        $kategori = Kategori::select('slug', 'nama')->orderBy('nama', 'asc')->get();
+        $kategori = Kategori::select('slug', 'nama_kategori')->orderBy('nama_kategori', 'asc')->get();
         return view('artikel/index', compact('artikel', 'kategori'));
     }
 

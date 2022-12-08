@@ -43,6 +43,10 @@ Route::get('/adopsi', function () {
     return view('/admin/adopsi');
 });
 
+Route::get('/adopsi', function () {
+    return view('/user/adopsi');
+});
+
 // Route::get('/post', function () {
 //     return view('/admin/post');
 // });

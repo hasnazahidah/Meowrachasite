@@ -4,12 +4,12 @@
 
 @section('content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">Post</h1>
+    <h1 class="h3 mb-4 text-gray-800">Artikel</h1>
 
     <form action="/post" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="judul">Post</label>
+            <label for="judul">Judul Artikel</label>
             <input type="text" class="form-control" id="judul" name="judul" value="{{old('judul')}}">
             @error('judul')
                 <small class="text-danger">{{ $message }}</small>
@@ -28,7 +28,7 @@
             <select class="form-control" id="kategori" name="kategori">
                 <option selected disabled>Pilih Katgeori</option>
                 @foreach ($kategori as $row)
-                    <option value="{{$row->id}}">{{$row->nama}}</option>
+                    <option value="{{$row->id}}">{{$row->nama_kategori}}</option>
                 @endforeach
             </select>
             @error('kategori')
