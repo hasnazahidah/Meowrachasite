@@ -17,10 +17,13 @@ class CreatePenitipanTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->string('nama_kucing', 50);
-            $table->date('tanggal_titip');
-            $table->date('tanggal_checkout');
-            $table->timestamps();
+            $table->unsignedBigInteger('id_kucing');
+            $table->foreign('id_kucing')->references('id')->on('kucing')->onDelete('cascade');
+            $table->string('tanggal_titip', 50);
+            $table->string('tanggal_checkout', 50);
+            $table->string('lama_titip', 50);
+            $table->string('layanan', 50);
+            $table->string('antar_jemput', 50);
         });
     }
 

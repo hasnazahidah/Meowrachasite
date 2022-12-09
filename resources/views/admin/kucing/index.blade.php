@@ -18,8 +18,11 @@
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Image</th>
-                <th scope="col">Nama_kucing</th>
-                <th scope="col">Jenis_kucing</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Ras</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Umur</th>
+                <th scope="col">Merk Makanan</th>
                 <th scope="col">Aksi</th>
                 </tr>
         </thead>
@@ -29,9 +32,13 @@
                     <th scope="row">{{$loop->iteration}}</th>
                     <td><img src="/upload/kucing/{{$row->image}}" alt="" width="80px" height="80px"></td>
                     <td>{{$row->nama_kucing}}</td>
-                    <td>{{$row->jenis_kucing}}</td>
+                    <td>{{$row->ras}}</td>
+                    <td>{{$row->gender}}</td>
+                    <td>{{$row->umur}}</td>
+                    <td>{{$row->merk_makanan}}</td>
                     <td width="20%">
                         <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/kucing/{{$row->id}}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i> Detail</a>
                         <a href="/kucing/{{$row->id}}/edit" class="btn btn-primary btn-sm mr-1"><i class="fas fa-edit"></i> Edit</a>
                         <form action="/kucing/{{$row->id}}" method="kucing">
                         @method('DELETE')

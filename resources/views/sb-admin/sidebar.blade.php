@@ -48,16 +48,38 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Users</span>
+                    <span>Data</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">                     
-                        <a class="collapse-item" href="utilities-color.html">Admin</a>
-                        <a class="collapse-item" href="utilities-border.html">Users</a>
-                        <a class="collapse-item" href="utilities-animation.html">Kucing</a>                  
+                        <a class="collapse-item" href="/">Users</a>
+                        <a class="collapse-item" href="/kucing">Kucing</a>                  
                     </div>
                 </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesUser"
+                    aria-expanded="true" aria-controls="collapseUtilitiesUser">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Services</span>
+                </a>
+                <div id="collapseUtilitiesUser" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">                     
+                        <a class="collapse-item" href="/">Adopsi</a>
+                        <a class="collapse-item" href="/">Konsultasi</a>
+                        <a class="collapse-item" href="/">Penitipan</a>                  
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Home</span>
+                </a>
             </li>
 
 

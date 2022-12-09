@@ -7,6 +7,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KucingController;
 use App\Http\Controllers\AdopsiController;
 use App\Http\Controllers\KonsultasiController;
+use App\Http\Controllers\PenitipanController;
 use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,7 @@ Route::resource('/kategori', 'KategoriController');
 Route::resource('/kucing', 'KucingController');
 Route::resource('/adopsi', 'AdopsiController');
 Route::resource('/konsultasi', 'KonsultasiController');
+Route::resource('/penitipan', 'PenitipanController');
 // Route::resource('/dashboard', 'DashboardController');
 
 // Route::get('/', 'ArtikelController@index');

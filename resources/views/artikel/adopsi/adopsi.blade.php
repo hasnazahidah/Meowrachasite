@@ -1,5 +1,5 @@
 @extends('artikel/template/app')
-@section('title', 'Artikel')
+@section('title', 'Adopsi')
 
 @section('content')
 
@@ -8,23 +8,25 @@
   
 
    <div class="card mt-4 shadow-sm">
-        <img src="/upload/post/{{$artikel->sampul}}" height="auto" class="card-img-top" alt="...">
+        <img src="/upload/adopsi/{{$adopsi->image}}" height="auto" class="card-img-top" alt="...">
         <div class="card-body">
-            <h3 class="card-title">{{$artikel->judul}}</h3>
+            <h3 class="card-title">{{$adopsi->title}}</h3>
             <small class="card-text">
-                <span class="text-muted"><a href="/artikel-kategori/{{$artikel->kategori->slug}}">{{$artikel->kategori->nama}}</a></span>
                 -
-                <span class="text-muted">{{$artikel->created_at->diffForHumans()}}</span>
+                <span class="text-muted">{{$adopsi->created_at->diffForHumans()}}</span>
                 -
-                <span class="text-muted">Tag :</span>
+                
                 
             </small>
             <br>
 
             
             <hr>
-
-            <p class="card-text">{!!$artikel->konten!!}</p>
+            <p class="card-text">{!!$adopsi->nama_kucing!!}</p>
+            <p class="card-text">{!!$adopsi->jenis_kucing!!}</p>
+            <p class="card-text">{!!$adopsi->alasan_owner!!}</p>
+            <p class="card-text">{!!$adopsi->medical_note!!}</p>
+            <p class="card-text">{!!$adopsi->deskripsi!!}</p>
 
             
         </div>
