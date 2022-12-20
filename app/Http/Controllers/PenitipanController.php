@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Penitipan;
+use App\Models\Kucing;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class PenitipanController extends Controller
      */
     public function index()
     {
-        $penitipan = Penitipan::select('id', 'tanggal_titip', 'tanggal_checkout', 'lama_titip', 'layanan', 'antar_jemput')->latest()->paginate(10);
+        $penitipan = Penitipan::select('id', 'tanggal_titip', 'tanggal_checkout', 'lama_titip', 'layanan', 'antar_jemput', 'id_kucing')->latest()->paginate(10);
         return view('admin/penitipan/index', compact('penitipan'));
     }
 
@@ -27,7 +28,8 @@ class PenitipanController extends Controller
      */
     public function create()
     {
-        return view('admin/penitipan/create');
+        $kucing = Kucing::select('id', 'nama_kucing')->get();
+        return view('admin/penitipan/create', compact('kucing'));
     }
 
     /**
@@ -44,14 +46,19 @@ class PenitipanController extends Controller
             'lama_titip' => 'required',
             'layanan' => 'required',
             'antar_jemput' => 'required',
+            'kucing' => 'required'
         ]);
+        
 
         Penitipan::create([
+            
             'tanggal_titip' => Str::title($request->tanggal_titip),
             'tanggal_checkout' => Str::title($request->tanggal_checkout),
             'lama_titip' => Str::title($request->lama_titip),
             'layanan' => Str::title($request->layanan),
-            'antar_jemput' => Str::title($request->antar_jemput)
+            'antar_jemput' => Str::title($request->antar_jemput),
+            'id_kucing' => $request->kucing
+            
         ]);
 
         $request->session()->flash('sukses', '
@@ -81,8 +88,9 @@ class PenitipanController extends Controller
      */
     public function edit($id)
     {
+        $kucing = Kucing::select('id', 'nama_kucing')->get();
         $penitipan = Penitipan::select('id', 'tanggal_titip', 'tanggal_checkout', 'lama_titip', 'layanan', 'antar_jemput')->whereId($id)->firstOrFail();
-        return view('admin/penitipan/edit', compact('penitipan'));
+        return view('admin/penitipan/edit', compact('penitipan', 'kucing'));
     }
 
     /**
@@ -100,6 +108,7 @@ class PenitipanController extends Controller
             'lama_titip' => 'required',
             'layanan' => 'required',
             'antar_jemput' => 'required',
+            'nama_kucing' => 'required'
         ]);
 
         Penitipan::whereId($id)->update([
@@ -107,8 +116,11 @@ class PenitipanController extends Controller
             'tanggal_checkout' => Str::title($request->tanggal_checkout),
             'lama_titip' => Str::title($request->lama_titip),
             'layanan' => Str::title($request->layanan),
-            'antar_jemput' => Str::title($request->antar_jemput)
+            'antar_jemput' => Str::title($request->antar_jemput),
+            'nama_kucing' => $request->nama_kucing
         ]);
+
+        
 
         $request->session()->flash('sukses', '
             <div class="alert alert-success" role="alert">

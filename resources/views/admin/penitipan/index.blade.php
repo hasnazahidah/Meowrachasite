@@ -17,6 +17,12 @@
         <thead>
                 <tr>
                 <th scope="col">No</th>
+                <th scope="col">Image</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Ras</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Umur</th>
+                <th scope="col">Merk Makanan</th>
                 <th scope="col">Tanggal Titip</th>
                 <th scope="col">Lama Titip</th>
                 <th scope="col">Layanan</th>
@@ -28,6 +34,11 @@
                 @foreach ($penitipan as $row)
                     <tr>
                     <th scope="row">{{$loop->iteration}}</th>
+                    <td>{{$row->kucing->nama_kucing}}</td>
+                    <td>{{$row->kucing->ras}}</td>
+                    <td>{{$row->kucing->gender}}</td>
+                    <td>{{$row->kucing->umur}}</td>
+                    <td>{{$row->kucing->merk_makanan}}</td>
                     <td>{{$row->tanggal_titip}}</td>
                     <td>{{$row->tanggal_checkout}}</td>
                     <td>{{$row->lama_titip}}</td>

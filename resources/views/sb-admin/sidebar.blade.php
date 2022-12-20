@@ -36,8 +36,6 @@
                         <a class="collapse-item" href="/adopsi">Adopsi</a>
                         <a class="collapse-item" href="/konsultasi">Konsultasi</a>
                         <a class="collapse-item" href="/penitipan">Penitipan</a>
-                        <a class="collapse-item" href="/post">Artikel</a>
-                        <a class="collapse-item" href="/kategori">Kategori</a>
                         <a class="collapse-item" href="/kucing">Kucing</a>
                     </div>
                 </div>
@@ -54,7 +52,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">                     
                         <a class="collapse-item" href="/">Users</a>
-                        <a class="collapse-item" href="/kucing">Kucing</a>                  
+                        <a class="collapse-item" href="/post">Artikel</a>
+                        <a class="collapse-item" href="/kategori">Kategori</a>                 
                     </div>
                 </div>
             </li>
@@ -83,32 +82,13 @@
             </li>
 
 
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-                Addons
-            </div> -->
+            <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-arrow-left"></i>
+          <span>Halaman Depan</span></a>
+      </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                    aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Setting</span>
-                </a>
-                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item active" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li> -->
 
             
 
