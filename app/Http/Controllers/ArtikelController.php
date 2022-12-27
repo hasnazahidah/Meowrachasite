@@ -11,7 +11,7 @@ class ArtikelController extends Controller
 {
     public function index()
     {
-
+        
         $artikel = Post::select('sampul', 'judul', 'slug','konten', 'created_at')->latest()->paginate(6);    
         $kategori = Kategori::select('slug', 'nama')->orderBy('nama', 'asc')->get();
         return view('artikel/index', compact('artikel', 'kategori'));

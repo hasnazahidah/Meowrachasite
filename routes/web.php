@@ -28,48 +28,45 @@ Route::get('/', function () {
 
 
 
-Route::get('/dashboard', function () {
-    return view('/admin/dashboard');
+
+
+
+Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
+
+    Route::get('/transaksi', function () {
+        return view('/admin/transaksi');
+    });
+    Route::get('/dashboard', function () {
+        return view('/admin/dashboard');
+    });
+    
+    Route::get('/konsultasi', function () {
+        return view('/admin/konsultasi');
+    });
+    
+    Route::get('/penitipan', function () {
+        return view('/admin/penitipan');
+    });
+    
+    Route::get('/adopsi', function () {
+        return view('/admin/adopsi');
+    });
+
+    Route::resource('/post', 'PostController');
+    Route::resource('/kategori', 'KategoriController');
+    Route::resource('/kucing', 'KucingController');
+    Route::resource('/adopsi', 'AdopsiController');
+    Route::resource('/konsultasi', 'KonsultasiController');
+    Route::resource('/penitipan', 'PenitipanController');
+
+
+
 });
 
-// Route::get('/artikel', function () {
-//     return view('/admin/artikel');
-// });
 
-Route::get('/konsultasi', function () {
-    return view('/admin/konsultasi');
-});
-
-Route::get('/penitipan', function () {
-    return view('/admin/penitipan');
-});
-
-Route::get('/adopsi', function () {
-    return view('/admin/adopsi');
-});
-
-// Route::get('/post', function () {
-//     return view('/admin/post');
-// });
-
-
-Auth::routes();
-
-Route::resource('/post', 'PostController');
-Route::resource('/kategori', 'KategoriController');
-Route::resource('/kucing', 'KucingController');
-Route::resource('/adopsi', 'AdopsiController');
-Route::resource('/konsultasi', 'KonsultasiController');
-Route::resource('/penitipan', 'PenitipanController');
-Route::resource('/transaksi', 'TransaksiController');
-// Route::resource('/dashboard', 'DashboardController');
-
-// Route::get('/', 'ArtikelController@index');
-// Route::get('/{slug}', 'ArtikelController@artikel');
-// Route::get('/artikel-kategori/{slug}', 'ArtikelController@kategori');
-
-
-
-Route::get('/', [ArtikelController::class, 'index']);
-Route::get('/{slug}', [ArtikelController::class, 'artikel']);
-Route::get('/artikel-kategori/{slug}', [ArtikelController::class, 'kategori']);
+    route::get('/home',[HomeController::class,'index'])->name('home');    
+    Route::get('/', [ArtikelController::class, 'index']);
+    Route::get('/{slug}', [ArtikelController::class, 'artikel']);
+    Route::get('/artikel-kategori/{slug}', [ArtikelController::class, 'kategori']);
+ 
+    Auth::routes();

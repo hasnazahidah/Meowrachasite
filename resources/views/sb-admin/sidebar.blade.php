@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -22,14 +22,16 @@
             <hr class="sidebar-divider">
 
             
-
+            
             <!-- Nav Item - Pages Collapse Menu -->
+            @if (auth()->user()->level == "user")
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Main</span>
                 </a>
+                
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Services:</h6>
@@ -39,7 +41,9 @@
                         <a class="collapse-item" href="/kucing">Kucing</a>
                     </div>
                 </div>
+                
             </li>
+            
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -57,7 +61,7 @@
                     </div>
                 </div>
             </li>
-
+            @endif
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesUser"
                     aria-expanded="true" aria-controls="collapseUtilitiesUser">
@@ -67,19 +71,13 @@
                 <div id="collapseUtilitiesUser" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">                     
-                        <a class="collapse-item" href="/">Adopsi</a>
-                        <a class="collapse-item" href="/">Konsultasi</a>
-                        <a class="collapse-item" href="/">Penitipan</a>                  
+                        <a class="collapse-item" href="/adopsi">Adopsi</a>
+                        <a class="collapse-item" href="/konsultasi">Konsultasi</a>
+                        <a class="collapse-item" href="/penitipan">Penitipan</a>                  
                     </div>
                 </div>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/">
-                    <i class="fas fa-fw fa-home"></i>
-                    <span>Home</span>
-                </a>
-            </li>
+            
 
 
             <!-- Nav Item - Dashboard -->
