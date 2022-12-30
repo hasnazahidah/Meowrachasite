@@ -24,7 +24,7 @@
             
             
             <!-- Nav Item - Pages Collapse Menu -->
-            @if (auth()->user()->level == "user")
+            @if ( Auth::user()->role == 'admin')
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">

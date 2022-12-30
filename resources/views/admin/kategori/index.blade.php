@@ -9,7 +9,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">Kategori</h1>
 
-    <a href="/kategori/create/" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Post</a>
+    <a href="/kategori/create/" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Kategori</a>
 
 
   

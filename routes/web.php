@@ -28,10 +28,10 @@ Route::get('/', function () {
 
 
 
+Auth::routes();
 
 
-
-Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
+Route::group(['middleware' => ['web']], function () {
 
     Route::get('/transaksi', function () {
         return view('/admin/transaksi');
@@ -69,4 +69,4 @@ Route::group(['middleware' => ['auth','ceklevel:admin,user']], function () {
     Route::get('/{slug}', [ArtikelController::class, 'artikel']);
     Route::get('/artikel-kategori/{slug}', [ArtikelController::class, 'kategori']);
  
-    Auth::routes();
+    
