@@ -16,7 +16,7 @@ class KucingController extends Controller
      */
     public function index()
     {
-        $kucing = Kucing::select('image', 'nama_kucing', 'ras', 'gender', 'umur', 'merk_makanan')->latest()->paginate(5);
+        $kucing = Kucing::latest()->paginate(5);
         return view('admin/kucing/index', compact('kucing'));
     }
 

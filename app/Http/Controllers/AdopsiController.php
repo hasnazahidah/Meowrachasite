@@ -12,7 +12,7 @@ class AdopsiController extends Controller
 {
     public function index()
     {
-        $adopsi = Adopsi::select('id', 'nama_kucing', 'image', 'jenis_kucing', 'alasan_owner', 'medical_note', 'deskripsi')->latest()->paginate(10);
+        $adopsi = Adopsi::select('id', 'nama_kucing', 'image', 'jenis_kucing', 'alasan_owner', 'medical_note', 'deskripsi')->latest()->paginate(5);
         return view('admin/adopsi/index', compact('adopsi'));
     }
 

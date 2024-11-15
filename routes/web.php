@@ -10,6 +10,7 @@ use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\PenitipanController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,6 +59,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('/adopsi', 'AdopsiController');
     Route::resource('/konsultasi', 'KonsultasiController');
     Route::resource('/penitipan', 'PenitipanController');
+    Route::resource('/users', 'UserController');
 
 
 

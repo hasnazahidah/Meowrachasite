@@ -17,6 +17,10 @@
     <div class="container">
         @include('artikel/template/artikel-carousell')
     </div>
+    
+    <div class="">
+        @include('artikel/template/footer')
+    </div>
 
     <!-- <div class="container">
         @yield('content')

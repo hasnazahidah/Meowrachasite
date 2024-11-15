@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Penitipan;
 use App\Models\Kucing;
+use App\Models\Users;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class PenitipanController extends Controller
      */
     public function index()
     {
-        $penitipan = Penitipan::select('id', 'tanggal_titip', 'tanggal_checkout', 'lama_titip', 'layanan', 'antar_jemput', 'id_kucing')->latest()->paginate(10);
+        $penitipan = Penitipan::latest()->paginate(10);
         return view('admin/penitipan/index', compact('penitipan'));
     }
 
@@ -29,7 +30,8 @@ class PenitipanController extends Controller
     public function create()
     {
         $kucing = Kucing::select('id', 'nama_kucing')->get();
-        return view('admin/penitipan/create', compact('kucing'));
+        $users = Users::select('id', 'name')->get();
+        return view('admin/penitipan/create', compact('kucing', 'users'));
     }
 
     /**
@@ -46,20 +48,33 @@ class PenitipanController extends Controller
             'lama_titip' => 'required',
             'layanan' => 'required',
             'antar_jemput' => 'required',
-            'kucing' => 'required'
+            'id_kucing' => 'required',
+            'id_user' => 'required'
         ]);
         
+        
+        $penitipan = new Penitipan;
+        $penitipan->tanggal_titip=Str::title($request->tanggal_titip);
+        $penitipan->tanggal_checkout=Str::title($request->tanggal_checkout);
+        $penitipan->lama_titip=Str::title($request->lama_titip);
+        $penitipan->layanan=Str::title($request->layanan);
+        $penitipan->antar_jemput=Str::title($request->antar_jemput);
+        $penitipan->id_kucing=$request->id_kucing;
+        $penitipan->id_user=$request->id_user;
+        $penitipan->save();
+        
 
-        Penitipan::create([
-            
-            'tanggal_titip' => Str::title($request->tanggal_titip),
-            'tanggal_checkout' => Str::title($request->tanggal_checkout),
-            'lama_titip' => Str::title($request->lama_titip),
-            'layanan' => Str::title($request->layanan),
-            'antar_jemput' => Str::title($request->antar_jemput),
-            'id_kucing' => $request->kucing
-            
-        ]);
+        // Penitipan::create([
+        //     'tanggal_titip' => Str::title($request->tanggal_titip),
+        //     'tanggal_checkout' => Str::title($request->tanggal_checkout),
+        //     'lama_titip' => Str::title($request->lama_titip),
+        //     'layanan' => Str::title($request->layanan),
+        //     'antar_jemput' => Str::title($request->antar_jemput),
+        //     'id_kucing' => $request->kucing,
+        //     'id_users' => $request->users
+        // ]);
+
+        
 
         $request->session()->flash('sukses', '
             <div class="alert alert-success" role="alert">

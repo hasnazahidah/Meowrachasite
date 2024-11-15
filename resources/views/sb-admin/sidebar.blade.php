@@ -55,7 +55,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">                     
-                        <a class="collapse-item" href="/">Users</a>
+                        <a class="collapse-item" href="/users">Users</a>
                         <a class="collapse-item" href="/post">Artikel</a>
                         <a class="collapse-item" href="/kategori">Kategori</a>                 
                     </div>
