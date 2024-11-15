@@ -63,26 +63,27 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Tampilan Website
 
-Halaman Home
+
+- **Halaman Home**
 ![Contoh Gambar](tampilanweb/home.png)
 
-Halaman Dashboard
+- **Halaman Dashboard**
 ![Contoh Gambar](tampilanweb/dashbord.png)
 
-Halaman Data Adopsi
+- **Halaman Data Adopsi**
 ![Contoh Gambar](tampilanweb/adopsi/adopsi%20index.png)
 
-Halaman Data Penitipan
+- **Halaman Data Penitipan**
 ![Contoh Gambar](tampilanweb/penitipan/penitipan%20index.png)
 
-Halaman Data Konsultasi
+- **Halaman Data Konsultasi**
 ![Contoh Gambar](tampilanweb/konsultasi/konsultasi%20index.png)
 
-Halaman Data Artikel
+- **Halaman Data Artikel**
 ![Contoh Gambar](tampilanweb/artikel/artikel%20data.png)
 
-Halaman Data User
+- **Halaman Data User**
 ![Contoh Gambar](tampilanweb/data%20user.png)
 
-Halaman Data Kategori
+- **Halaman Data Kategori**
 ![Contoh Gambar](tampilanweb/kategori/data%20category%20artikel.png)
